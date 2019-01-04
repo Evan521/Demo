@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>小屋</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- 引入样式  element-ui-->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<div id="index" class="" >
+    <h1 style="text-align: center;margin-top: 100px">猪猪刘全有的空间</h1>
+    <el-form v-model="userObj" style="text-align: center" v-if="loginDo">
+    <div>
+        <el-input v-model="userObj.userName" style="width: 300px" placeholder="请输入用户名" />
+    </div>
+    <div style="margin-top: 20px">
+        <el-input v-model="userObj.password" type="password" style="width: 300px" placeholder="请输入密码" />
+    </div>
+    <div style="margin-top: 20px">
+        <el-button type="info" round @click="login">登录</el-button>
+        <el-button type="info" round @click="reset">重置</el-button>
+        <el-button type="info" round @click="register">注册</el-button>
+    </div>
+</el-form>
+    <el-form v-model="userObj" style="text-align: center" v-if="regist">
+        <div>
+            <el-input v-model="userObj.userName" style="width: 400px" placeholder="请输入用户名" />
+        </div>
+        <div style="margin-top: 20px">
+            <el-input v-model="userObj.password" type="password" style="width: 400px" placeholder="请输入密码" />
+        </div>
+        <div style="margin-top: 20px">
+            <el-input v-model="password2" type="password" style="width: 400px" placeholder="请确认密码" />
+        </div>
+        <div style="margin-top: 20px">
+            <el-button type="info" round @click="registUser">注册</el-button>
+            <el-button type="info" round @click="back">返回</el-button>
+        </div>
+    </el-form>
+</div>
+</body>
+<script src="../static/js/vue/vue.min.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+<script src="../static/js/login/login.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</html>
+
