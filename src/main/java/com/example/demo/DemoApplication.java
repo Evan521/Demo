@@ -25,6 +25,7 @@ import java.security.spec.X509EncodedKeySpec;
 @EnableCaching
 public class DemoApplication {
 
+
     public static void main(String[] args) throws IOException {
         SpringApplication.run(DemoApplication.class, args);
         String str = "private String wed;" +
@@ -37,7 +38,6 @@ public class DemoApplication {
         for(int i=0,len=a.length;i<len;i++){
             b += a[i].split("String")[1];
         }
-        HttpClient();
         System.out.println(b);
 
         System.out.println("程序启动成功。。。");
